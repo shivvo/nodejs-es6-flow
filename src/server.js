@@ -1,14 +1,12 @@
 // @flow
 import http from 'http';
 import express, {Application, Request, Response} from 'express';
+import HelloWorldRouter from './HelloWorldRouter';
+import Api from './Api';
 
-const app: Application = express();
+const api: Api = new Api('', [], [HelloWorldRouter]);
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('hello, world');
-});
-
-const server: http.Server = http.createServer(app);
+const server: http.Server = http.createServer(api.app);
 
 const onError = (err: Error): void => {
   console.log(err);

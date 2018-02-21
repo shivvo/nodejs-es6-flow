@@ -2,10 +2,10 @@
 
 import AbstractRouter from './AbstractRouter';
 
-class HelloWorldRouter: AbstractRouter {
+class HelloWorldRouter extends AbstractRouter {
   
   constructor() {
-    super('GET', '/');
+    super('GET', '/', false);
   }
 
   async content(request: Request): Promise<any> {
@@ -13,3 +13,5 @@ class HelloWorldRouter: AbstractRouter {
   }
 
 }
+
+export default new HelloWorldRouter().router;
