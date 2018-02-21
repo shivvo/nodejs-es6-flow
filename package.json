@@ -5,6 +5,8 @@
   "main": "",
   "scripts": {
     "start": "webpack -p && node build/bundle.js",
+    "flow": "node_modules/.bin/flow",
+    "flow-stop": "node_modules/.bin/flow stop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "shivvo",
@@ -16,6 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "express": "^4.16.2",
+    "flow-bin": "^0.66.0",
     "http": "0.0.0",
     "webpack": "^3.11.0",
     "webpack-node-externals": "^1.6.0"

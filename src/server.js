@@ -1,3 +1,4 @@
+// @flow
 import http from 'http';
 import express, {Application, Request, Response} from 'express';
 
@@ -14,7 +15,7 @@ const onError = (err: Error): void => {
 };
 
 const onListening = (): void => {
-  const host = server.address().host;
+  const host = server.address().address;
   const port = server.address().port;
   
   console.log(`Listening on ${host}:${port}`);
