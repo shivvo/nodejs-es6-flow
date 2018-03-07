@@ -2,9 +2,9 @@
 import http from 'http';
 import express, {Application, Request, Response} from 'express';
 import HelloWorldRouter from './HelloWorldRouter';
-import Api from './Api';
+import API from './API';
 
-const api: Api = new Api('', [], [HelloWorldRouter]);
+const api: API = new API('', [], [HelloWorldRouter]);
 
 const server: http.Server = http.createServer(api.app);
 

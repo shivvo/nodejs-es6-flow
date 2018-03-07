@@ -3,7 +3,7 @@ import express, {Application, Router, Request, Response, NextFunction} from 'exp
 
 type ExpressHandlerFunction = (Request, Response, NextFunction) => any;
 
-class Api {
+class API {
   
   app: Application;
 
@@ -20,4 +20,4 @@ class Api {
   }
 }
 
-export default Api;
+export default API;
